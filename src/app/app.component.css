@@ -1,0 +1,10 @@
+.navbar {
+    background: rgb(4, 93, 93, 1);
+}
+
+.nav-item {
+    color: white;
+}
+ul li a:hover{
+    color: yellow;
+}

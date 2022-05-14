@@ -1,0 +1,45 @@
+<h2 class="text-center">Update/Edit Vaccine</h2>
+<div [hidden]="submitted">
+    <form #updateForm="ngForm" (ngSubmit)="onSubmit(updateForm)" novalidate class="container col-sm-6">
+        <div class="form-group">
+            <p>
+                <label for="name">Vaccine Name</label>
+                <input type="text" class="form-control" id="vaccineName" required minlength="4" #vaccineName="ngModel"
+                    [(ngModel)]="vaccine.vaccineName" name="vaccineName" pattern="^[a-zA-Z ]+$">
+            </p>
+            <div *ngIf="!vaccineName?.valid && (vaccineName?.dirty || vaccineName?.touched)" class="required">
+                <div *ngIf="vaccineName.errors?.['required']">
+                    Vaccine Name is Required.
+                </div>
+                <div *ngIf="vaccineName.errors?.['minlength']">
+                    Vaccine Name Minimum Length is {{vaccineName.errors?.['minlength']?.requiredLength}}.
+                </div>
+                <div *ngIf="vaccineName.errors?.['pattern']">
+                    Only Characters are allowed.
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <p>
+                <label for="name">Vaccine Name</label>
+                <input type="text" class="form-control" id="description" required minlength="4" #description="ngModel"
+                    [(ngModel)]="vaccine.description" name="description">
+            </p>
+            <div *ngIf="!description?.valid && (description?.dirty || description?.touched)" class="required">
+                <div *ngIf="description.errors?.['required']">
+                    Description is Required.
+                </div>
+                <div *ngIf="description.errors?.['minlength']">
+                    Description Minimum Length is {{description.errors?.['minlength']?.requiredLength}}.
+                </div>
+            </div>
+        </div>
+        <p>
+            <button class="btn btn-success" type="Submit" [disabled]="!updateForm.valid">Submit</button>
+        </p>
+    </form>
+</div>
+
+<div [hidden]="!submitted">
+    <h3>Vaccine Updated Successfully!</h3>
+</div>
