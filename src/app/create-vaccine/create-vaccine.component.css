@@ -8,3 +8,6 @@ button{
 input{
     border-color: black;
 }
+.required{
+    color: red;
+}
