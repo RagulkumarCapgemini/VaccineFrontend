@@ -8,13 +8,15 @@ import { FormsModule } from '@angular/forms';
 import { VaccineDetailsComponent } from './vaccine-details/vaccine-details.component';
 import { UpdateVaccineComponent } from './update-vaccine/update-vaccine.component';
 import { CreateVaccineComponent } from './create-vaccine/create-vaccine.component';
+import { VaccineViewComponent } from './vaccine-view/vaccine-view.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     VaccineDetailsComponent,
     UpdateVaccineComponent,
-    CreateVaccineComponent
+    CreateVaccineComponent,
+    VaccineViewComponent
   ],
   imports: [
     BrowserModule,
