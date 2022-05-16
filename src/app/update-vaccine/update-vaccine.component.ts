@@ -41,7 +41,7 @@ export class UpdateVaccineComponent implements OnInit {
       error => console.log(error));
   }
 
-  onSubmit(updateForm: { value: any}) {
+  onSubmit(updateForm: { value: any }) {
     this.submitted = true;
     this.updateVaccine();
   }

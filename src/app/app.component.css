@@ -5,6 +5,7 @@
 .nav-item {
     color: white;
 }
-ul li a:hover{
+
+ul li a:hover {
     color: yellow;
 }

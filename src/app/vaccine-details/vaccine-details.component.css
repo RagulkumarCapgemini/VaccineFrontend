@@ -1,12 +1,15 @@
-button{
+button {
     margin-left: 5%;
 }
-table{
+
+table {
     margin-top: 4%;
 }
-#update:hover{
+
+#update:hover {
     background-color: aqua;
 }
-#delete:hover{
+
+#delete:hover {
     background-color: rgb(153, 0, 0);
 }
