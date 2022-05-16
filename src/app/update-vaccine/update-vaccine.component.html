@@ -25,7 +25,7 @@
         <div class="form-group">
             <p>
                 <label for="name">Description</label>
-                <input type="text" class="form-control" id="description" required minlength="4" #description="ngModel"
+                <input type="text" class="form-control" id="description" required minlength="10" #description="ngModel"
                     [(ngModel)]="vaccine.description" name="description">
             </p>
             <div *ngIf="!description?.valid && (description?.dirty || description?.touched)" class="required">
