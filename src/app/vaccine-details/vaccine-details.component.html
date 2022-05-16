@@ -13,7 +13,7 @@
             </thead>
             <tbody>
                 <tr *ngFor="let vaccines of vaccine | async" class="text-center">
-                    <td title="{{vaccines.vaccineName}}">{{vaccines.vaccineName}}</td>
+                    <td title="{{vaccines.vaccineName}}"><b>{{vaccines.vaccineName}}</b></td>
                     <td>{{vaccines.description}}</td>
                     <td><button id="update" title="Update Vaccine" (click)="updateVaccine(vaccines.vaccineId)"
                             class="btn btn-info"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
