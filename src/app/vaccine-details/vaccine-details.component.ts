@@ -30,6 +30,10 @@ export class VaccineDetailsComponent implements OnInit {
       error => console.log(error));
   }
 
+  getVaccineByName(vaccineName : string) {
+    this.router.navigate(['find', vaccineName]);
+  }
+
   updateVaccine(id: number) {
     this.router.navigate(['update', id]);
   }
