@@ -19,7 +19,7 @@ export class VaccineViewComponent implements OnInit {
     this.reloadData();
   }
   reloadData() {
-    this.vaccine = this.vaccineService.allVaccine();
+    this.vaccine = this.vaccineService.getAllVaccine();
   }
 
 }

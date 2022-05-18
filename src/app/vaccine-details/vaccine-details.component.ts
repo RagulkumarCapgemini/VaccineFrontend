@@ -19,7 +19,7 @@ export class VaccineDetailsComponent implements OnInit {
     this.reloadData();
   }
   reloadData() {
-    this.vaccine = this.vaccineService.allVaccine();
+    this.vaccine = this.vaccineService.getAllVaccine();
   }
 
   deleteVaccine(id: number) {

@@ -47,6 +47,6 @@ export class UpdateVaccineComponent implements OnInit {
   }
 
   gotoList() {
-    this.router.navigate(['/Vaccine']);
+    this.router.navigate(['/vaccine']);
   }
 }

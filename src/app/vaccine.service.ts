@@ -8,27 +8,27 @@ import { Vaccine } from './vaccine';
 })
 export class VaccineService {
 
-  private baseUrl = "http://localhost:8080/vaccine"
+  private baseUrl = "http://localhost:8080/api/admin"
 
   constructor(private http: HttpClient) { }
 
-  allVaccine(): Observable<any> {
-    return this.http.get(`${this.baseUrl}/all`);
+  getAllVaccine(): Observable<any> {
+    return this.http.get(`${this.baseUrl}/vaccine`);
   }
 
   addVaccine(vaccine: object): Observable<object> {
-    return this.http.post(`${this.baseUrl}/add`, vaccine);
+    return this.http.post(`${this.baseUrl}/vaccine/add`, vaccine);
   }
 
   updateVaccine(id: number, value: any): Observable<object> {
-    return this.http.put(`${this.baseUrl}/update/${id}`, value);
+    return this.http.put(`${this.baseUrl}/id/vaccine/update/${id}`, value);
   }
 
   deleteVaccine(id: number): Observable<any> {
-    return this.http.delete(`${this.baseUrl}/delete/${id}`, { responseType: 'text' });
+    return this.http.delete(`${this.baseUrl}/vaccine/delete/${id}`, { responseType: 'text' });
   }
 
   getVaccineById(vaccineId: number): Observable<any> {
-    return this.http.get(`${this.baseUrl}/vaccineid/${vaccineId}`);
+    return this.http.get(`${this.baseUrl}/vaccines/${vaccineId}`);
   }
 }
