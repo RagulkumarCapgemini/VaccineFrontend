@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Vaccine } from './vaccine';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +6,6 @@ import { Vaccine } from './vaccine';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = "Vaccine Project" 
+  title = "Vaccine Module"
 }
 

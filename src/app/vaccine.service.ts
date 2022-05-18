@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { Vaccine } from './vaccine';
 
 @Injectable({
   providedIn: 'root'
@@ -25,10 +26,6 @@ export class VaccineService {
 
   deleteVaccine(id: number): Observable<any> {
     return this.http.delete(`${this.baseUrl}/delete/${id}`, { responseType: 'text' });
-  }
-
-  getVaccineByName(vaccineName: string): Observable<any> {
-    return this.http.get(`${this.baseUrl}/name/${vaccineName}`);
   }
 
   getVaccineById(vaccineId: number): Observable<any> {

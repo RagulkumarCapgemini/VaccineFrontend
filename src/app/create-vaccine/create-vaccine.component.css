@@ -1,13 +1,16 @@
-button{
+button {
     margin-top: 5%;
 }
-.form-group{
+
+.form-group {
     margin-top: 3%;
     border-color: black;
 }
-input{
+
+input {
     border-color: black;
 }
-.required{
+
+.required {
     color: red;
 }

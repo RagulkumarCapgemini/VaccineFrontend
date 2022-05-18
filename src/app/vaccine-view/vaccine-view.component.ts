@@ -16,9 +16,9 @@ export class VaccineViewComponent implements OnInit {
   constructor(private vaccineService: VaccineService, private router: Router) { }
 
   ngOnInit(): void {
-    this.reloadDate();
+    this.reloadData();
   }
-  reloadDate() {
+  reloadData() {
     this.vaccine = this.vaccineService.allVaccine();
   }
 

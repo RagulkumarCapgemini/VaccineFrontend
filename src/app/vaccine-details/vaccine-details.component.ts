@@ -16,16 +16,16 @@ export class VaccineDetailsComponent implements OnInit {
   constructor(private vaccineService: VaccineService, private router: Router) { }
 
   ngOnInit(): void {
-    this.reloadDate();
+    this.reloadData();
   }
-  reloadDate() {
+  reloadData() {
     this.vaccine = this.vaccineService.allVaccine();
   }
 
   deleteVaccine(id: number) {
     this.vaccineService.deleteVaccine(id).subscribe(data => {
       console.log(data);
-      this.reloadDate();
+      this.reloadData();
     },
       error => console.log(error));
   }
