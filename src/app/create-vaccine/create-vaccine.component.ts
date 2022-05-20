@@ -28,14 +28,6 @@ export class CreateVaccineComponent implements OnInit {
     this.vaccine = new Vaccine();
   }
 
-  // nameCheck(){
-  //   console.log(this.vaccine);
-  //   this.vaccineService.vaccineNameCheck(this.vaccine).subscribe(data => {
-  //     alert("Name already exists!");
-  //   },
-  //   error => alert("Name already exists!"));
-  // }
-
   save() {
     
     this.vaccineService.addVaccine(this.vaccine).subscribe(data => {

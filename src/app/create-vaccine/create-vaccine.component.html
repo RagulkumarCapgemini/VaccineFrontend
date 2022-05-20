@@ -4,7 +4,7 @@
     <div class="form-group">
       <p>
         <label for="name">Vaccine Name</label>
-        <input type="text" class="form-control" id="vaccineName" required minlength="4" maxlength="15"
+        <input type="text" title="{{vaccine.vaccineName}}" class="form-control" id="vaccineName" required minlength="4" maxlength="15"
           #vaccineName="ngModel" [(ngModel)]="vaccine.vaccineName" name="vaccineName" pattern="^[a-zA-Z ]+$">
       </p>
       <div *ngIf="!vaccineName?.valid && (vaccineName?.dirty || vaccineName?.touched)" class="required">
