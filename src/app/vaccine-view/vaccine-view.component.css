@@ -1,3 +1,7 @@
-table {
+.container {
     margin-top: 4%;
+}
+.text-center{
+    background-color: rgba(4, 93, 93, 0.824);
+    color: white;
 }

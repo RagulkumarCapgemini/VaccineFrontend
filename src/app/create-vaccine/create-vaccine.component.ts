@@ -1,6 +1,6 @@
-import { Vaccine } from './../vaccine';
+import { Vaccine } from '../Class/vaccine';
 import { Component, OnInit } from '@angular/core';
-import { VaccineService } from '../vaccine.service';
+import { VaccineService } from '../Service/vaccine.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -28,7 +28,16 @@ export class CreateVaccineComponent implements OnInit {
     this.vaccine = new Vaccine();
   }
 
+  // nameCheck(){
+  //   console.log(this.vaccine);
+  //   this.vaccineService.vaccineNameCheck(this.vaccine).subscribe(data => {
+  //     alert("Name already exists!");
+  //   },
+  //   error => alert("Name already exists!"));
+  // }
+
   save() {
+    
     this.vaccineService.addVaccine(this.vaccine).subscribe(data => {
       console.log(data)
       this.vaccine = new Vaccine();

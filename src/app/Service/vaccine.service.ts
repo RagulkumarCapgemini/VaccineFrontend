@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Vaccine } from './vaccine';
+import { Vaccine } from '../Class/vaccine';
 
 @Injectable({
   providedIn: 'root'
@@ -30,5 +30,9 @@ export class VaccineService {
 
   getVaccineById(vaccineId: number): Observable<any> {
     return this.http.get(`${this.baseUrl}/vaccines/${vaccineId}`);
+  }
+
+  getVaccineByName(vaccineName: string): Observable<any> {
+    return this.http.get(`${this.baseUrl}/name/${vaccineName}`);
   }
 }

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Vaccine } from '../vaccine';
-import { VaccineService } from '../vaccine.service';
+import { Vaccine } from '../Class/vaccine';
+import { VaccineService } from '../Service/vaccine.service';
 import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -17,7 +17,6 @@ export class UpdateVaccineComponent implements OnInit {
   constructor(private route: ActivatedRoute, private router: Router, private vaccineService: VaccineService) { }
 
   ngOnInit(): void {
-    this.vaccine = new Vaccine();
     this.vaccine = {
       vaccineId: 0,
       vaccineName: "",
@@ -47,6 +46,6 @@ export class UpdateVaccineComponent implements OnInit {
   }
 
   gotoList() {
-    this.router.navigate(['/vaccine']);
+    this.router.navigate(['/Vaccine']);
   }
 }

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { VaccineService } from '../vaccine.service';
-import { Vaccine } from '../vaccine';
+import { VaccineService } from '../Service/vaccine.service';
+import { Vaccine } from '../Class/vaccine';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
 

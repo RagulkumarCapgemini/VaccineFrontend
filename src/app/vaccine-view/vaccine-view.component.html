@@ -1,4 +1,4 @@
-<div class="panel panel-primary container">
+<!-- <div class="panel panel-primary container">
     <div class="panel-heading">
         <h2 class="text-center">Vaccine Details</h2>
     </div>
@@ -18,4 +18,9 @@
             </tbody>
         </table>
     </div>
+</div> -->
+
+<div *ngFor="let vaccines of vaccine | async" class="container">
+    <p class="text-center" title="{{vaccines.vaccineName}}"><b>{{vaccines.vaccineName}}</b></p>
+    <p class="description">{{vaccines.description}}</p>
 </div>

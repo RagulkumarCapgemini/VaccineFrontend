@@ -13,3 +13,9 @@ table {
 #delete:hover {
     background-color: rgb(153, 0, 0);
 }
+#View:hover {
+    background-color: rgb(4, 93, 93, 1);
+}
+#View{
+    float: left;
+}

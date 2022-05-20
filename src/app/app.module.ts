@@ -9,6 +9,7 @@ import { VaccineDetailsComponent } from './vaccine-details/vaccine-details.compo
 import { UpdateVaccineComponent } from './update-vaccine/update-vaccine.component';
 import { CreateVaccineComponent } from './create-vaccine/create-vaccine.component';
 import { VaccineViewComponent } from './vaccine-view/vaccine-view.component';
+import { VaccineSearchComponent } from './vaccine-search/vaccine-search.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { VaccineViewComponent } from './vaccine-view/vaccine-view.component';
     VaccineDetailsComponent,
     UpdateVaccineComponent,
     CreateVaccineComponent,
-    VaccineViewComponent
+    VaccineViewComponent,
+    VaccineSearchComponent
   ],
   imports: [
     BrowserModule,

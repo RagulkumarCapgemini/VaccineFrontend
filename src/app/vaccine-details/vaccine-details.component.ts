@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Vaccine } from '../vaccine';
+import { Vaccine } from '../Class/vaccine';
 import { Observable } from 'rxjs';
-import { VaccineService } from '../vaccine.service';
+import { VaccineService } from '../Service/vaccine.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -30,8 +30,8 @@ export class VaccineDetailsComponent implements OnInit {
       error => console.log(error));
   }
 
-  getVaccineByName(vaccineName: string) {
-    this.router.navigate(['find', vaccineName]);
+  searchVaccineByName(vaccineName: string) {
+    this.router.navigate(['search', vaccineName]);
   }
 
   updateVaccine(id: number) {
