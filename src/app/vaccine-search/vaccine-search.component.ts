@@ -11,7 +11,6 @@ import { Observable } from 'rxjs';
 })
 export class VaccineSearchComponent implements OnInit {
 
-  //vaccines!: Observable<Vaccine[]>;
   vaccineName: string = "";
   vaccine: Vaccine = new Vaccine();
   submitted = false;
@@ -20,11 +19,6 @@ export class VaccineSearchComponent implements OnInit {
 
   ngOnInit(): void {
     this.vaccine = new Vaccine();
-    this.vaccine = {
-      vaccineId: 0,
-      vaccineName: "",
-      description: ""
-    };
     this.vaccineName = this.route.snapshot.params['vaccineName'];
     this.vaccineService.getVaccineByName(this.vaccineName).subscribe(data => {
       console.log(data);

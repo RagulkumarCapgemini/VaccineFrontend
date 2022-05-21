@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class VaccineViewComponent implements OnInit {
 
-  vaccine!: Observable<Vaccine[]>;
+  vaccine: Observable<Vaccine[]>;
 
   constructor(private vaccineService: VaccineService, private router: Router) { }
 

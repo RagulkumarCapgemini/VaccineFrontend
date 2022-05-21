@@ -16,11 +16,6 @@ export class CreateVaccineComponent implements OnInit {
   constructor(private vaccineService: VaccineService, private router: Router) { }
 
   ngOnInit(): void {
-    this.vaccine = {
-      vaccineId: 0,
-      vaccineName: "",
-      description: ""
-    };
   }
 
   newVaccine(): void {
@@ -44,6 +39,6 @@ export class CreateVaccineComponent implements OnInit {
   }
 
   gotoList() {
-    this.router.navigate(['/Vaccine']);
+    this.router.navigate(['/VaccineDetails']);
   }
 }

@@ -11,13 +11,14 @@ import { Router } from '@angular/router';
 })
 export class VaccineDetailsComponent implements OnInit {
 
-  vaccine!: Observable<Vaccine[]>;
+  vaccine: Observable<Vaccine[]>;
 
   constructor(private vaccineService: VaccineService, private router: Router) { }
 
   ngOnInit(): void {
     this.reloadData();
   }
+
   reloadData() {
     this.vaccine = this.vaccineService.getAllVaccine();
   }

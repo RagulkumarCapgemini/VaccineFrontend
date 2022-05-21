@@ -7,9 +7,9 @@ import { VaccineViewComponent } from './vaccine-view/vaccine-view.component';
 import { VaccineSearchComponent } from './vaccine-search/vaccine-search.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'Vaccine', pathMatch: 'full' },
-  { path: 'Vaccine', component: VaccineDetailsComponent},
-  { path: 'VaccineView', component: VaccineViewComponent},
+  { path: '', redirectTo: 'VaccineDetails', pathMatch: 'full' },
+  { path: 'VaccineDetails', component: VaccineDetailsComponent},
+  { path: 'viewAll', component: VaccineViewComponent},
   { path: 'add', component: CreateVaccineComponent},
   { path: 'search/:vaccineName', component: VaccineSearchComponent},
   { path: 'update/:id', component: UpdateVaccineComponent}

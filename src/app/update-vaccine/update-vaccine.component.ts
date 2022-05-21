@@ -17,11 +17,6 @@ export class UpdateVaccineComponent implements OnInit {
   constructor(private route: ActivatedRoute, private router: Router, private vaccineService: VaccineService) { }
 
   ngOnInit(): void {
-    this.vaccine = {
-      vaccineId: 0,
-      vaccineName: "",
-      description: ""
-    };
     this.id = this.route.snapshot.params['id'];
     this.vaccineService.getVaccineById(this.id).subscribe(data => {
       console.log(data);
@@ -46,6 +41,6 @@ export class UpdateVaccineComponent implements OnInit {
   }
 
   gotoList() {
-    this.router.navigate(['/Vaccine']);
+    this.router.navigate(['/VaccineDetails']);
   }
 }
