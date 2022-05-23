@@ -26,20 +26,5 @@ export class VaccineSearchComponent implements OnInit {
     },
       error => console.log(error));
   }
-  // searchVaccineByName(vaccineName: string) {
-  //   this.router.navigate(['search', vaccineName]);
-  // }
 
-  // searchByName() {
-  //   this.vaccineService.getVaccineByName(this.vaccineName).subscribe(data => {
-  //     console.log(data);
-  //     this.vaccine = new Vaccine();
-  //   },
-  //     error => console.log(error));
-  // }
-
-  // onSubmit(searchVaccine: { value: any }) {
-  //   this.submitted = true;
-  //   this.searchByName();
-  // }
 }

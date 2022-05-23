@@ -30,7 +30,7 @@ export class CreateVaccineComponent implements OnInit {
       this.vaccine = new Vaccine();
       this.gotoList();
     },
-      error => console.log(error));
+      error => alert("Vaccine name already exists! Please go back..."));
   }
 
   onSubmit(createForm: { value: any }) {

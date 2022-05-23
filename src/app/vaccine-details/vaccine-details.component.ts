@@ -38,8 +38,4 @@ export class VaccineDetailsComponent implements OnInit {
   updateVaccine(id: number) {
     this.router.navigate(['update', id]);
   }
-
-  vaccineDetails(id: number) {
-    this.router.navigate(['details', id]);
-  }
 }
